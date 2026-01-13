@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -12,23 +13,27 @@ export default function RegisterPage() {
     agreeToTerms: false,
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match!");
-      return;
-    }
-    console.log("Registration submitted:", formData);
-    // Add your registration logic here
-  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  if (formData.password !== formData.confirmPassword) {
+    alert("Passwords don't match!");
+    return;
+  }
+
+  // continue submit logic
+};
+
+
+ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value, type, checked } = e.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: type === "checkbox" ? checked : value,
+  }));
+};
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex">
@@ -237,26 +242,28 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <button
-                onClick={handleSubmit}
-                type="button"
-                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-[#8139c6] to-[#39C681] hover:from-[#6d2db3] hover:to-[#2ea86f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                  <svg
-                    className="h-5 w-5 text-white/80 group-hover:text-white/100 transition"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-                Create account
-              </button>
+              <form onSubmit={handleSubmit}>
+  <button
+    type="submit"
+    className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-[#8139c6] to-[#39C681] hover:from-[#6d2db3] hover:to-[#2ea86f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+  >
+    <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+      <svg
+        className="h-5 w-5 text-white/80 group-hover:text-white/100 transition"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </span>
+    Create account
+  </button>
+</form>
+
             </div>
           </div>
 
