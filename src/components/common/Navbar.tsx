@@ -13,7 +13,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <>git 
+    <>
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-gradient-to-b from-[#000001] to-[#340063] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
