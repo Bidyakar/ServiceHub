@@ -32,7 +32,7 @@ export default function LoginPage() {
           {/* Logo and Header */}
           <div>
             <Link href="/" className="flex items-center justify-center gap-2 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#8139c6] to-[#39C681] rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#000001] to-[#191146] rounded-xl flex items-center justify-center">
                 <svg
                   width="28"
                   height="28"
@@ -49,7 +49,7 @@ export default function LoginPage() {
                   />
                 </svg>
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#8139c6] to-[#39C681] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#000001] to-[#191146] bg-clip-text text-transparent">
                 ServiceHub
               </span>
             </Link>
@@ -60,7 +60,7 @@ export default function LoginPage() {
               Or{" "}
               <Link
                 href="/register"
-                className="font-medium text-[#8139c6] hover:text-[#6d2db3] transition"
+                className="font-medium text-[#000001] hover:text-[#191146] transition"
               >
                 create a new account
               </Link>
@@ -111,7 +111,7 @@ export default function LoginPage() {
               <div className="w-full border-t border-gray-300" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-gradient-to-br from-gray-50 to-gray-100 text-gray-500">
+              <span className="px-2 bg-gradient-to-br from-gray-50 to-gray-100 text-black">
                 Or continue with email
               </span>
             </div>
@@ -121,7 +121,7 @@ export default function LoginPage() {
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                   Email address
                 </label>
                 <input
@@ -138,7 +138,7 @@ export default function LoginPage() {
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="password" className="block text-sm font-medium text-black mb-2">
                   Password
                 </label>
                 <input
@@ -173,7 +173,7 @@ export default function LoginPage() {
               <div className="text-sm">
                 <Link
                   href="/forgot-password"
-                  className="font-medium text-[#8139c6] hover:text-[#6d2db3] transition"
+                  className="font-medium text-[#000001] hover:text-[#191146] transition"
                 >
                   Forgot your password?
                 </Link>
@@ -183,7 +183,7 @@ export default function LoginPage() {
             <div>
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-[#8139c6] to-[#39C681] hover:from-[#6d2db3] hover:to-[#2ea86f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-b from-[#000001] to-[#191146] hover:from-[#191146] hover:to-[#000001] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                   <svg
@@ -219,7 +219,7 @@ export default function LoginPage() {
 
       {/* Right Side - Image/Brand Section */}
       <div className="hidden lg:block relative w-0 flex-1">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8139c6] to-[#39C681] opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#000001] to-[#191146] opacity-90"></div>
         <img
           className="absolute inset-0 h-full w-full object-cover mix-blend-overlay"
           src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop"

@@ -1,0 +1,534 @@
+[
+  {
+    "name": "Vehicles",
+    "slug": "vehicles",
+    "icon": "🚗",
+    "description": "Car & bike repair services",
+    "gradient": "from-blue-500 to-cyan-500",
+    "bgColor": "bg-blue-50",
+    "subcategories": [
+      {
+        "name": "Car Repair",
+        "slug": "car-repair",
+        "icon": "🚗",
+        "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=600&auto=format&fit=crop",
+        "description": "Complete car servicing",
+        "profiles": [
+          {
+            "id": "autofix-pro",
+            "name": "AutoFix Pro",
+            "rating": 5,
+            "jobs": 151,
+            "hourlyRate": 60,
+            "offerRate": 50,
+            "images": [
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1632823469964-087498552ca5?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "15+ years in car diagnostics and repair",
+              "Specialized in engine and transmission work",
+              "Same-day service for most repairs"
+            ],
+            "reviews": [
+              {
+                "id": "ojnlvvvpa",
+                "user": "BB",
+                "rating": 5,
+                "comment": "You are mazing",
+                "date": "2026-02-09"
+              }
+            ]
+          },
+          {
+            "id": "quick-car-service",
+            "name": "Quick Car Service",
+            "rating": 4.7,
+            "jobs": 120,
+            "hourlyRate": 55,
+            "offerRate": 45,
+            "images": [
+              "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Fast and reliable car servicing",
+              "All major brands covered",
+              "Free pickup and drop service"
+            ],
+            "reviews": []
+          }
+        ]
+      },
+      {
+        "name": "Bike Repair",
+        "slug": "bike-repair",
+        "icon": "🏍️",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop",
+        "description": "Motorcycle maintenance",
+        "profiles": [
+          {
+            "id": "bike-medics",
+            "name": "Bike Medics",
+            "rating": 4.8,
+            "jobs": 110,
+            "hourlyRate": 45,
+            "offerRate": 38,
+            "images": [
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Expert in two-wheeler repairs",
+              "Genuine spare parts only",
+              "90-day warranty on repairs"
+            ],
+            "reviews": []
+          }
+        ]
+      },
+      {
+        "name": "Car Wash",
+        "slug": "car-wash",
+        "icon": "🧼",
+        "image": "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=600&auto=format&fit=crop",
+        "description": "Professional car cleaning",
+        "profiles": []
+      },
+      {
+        "name": "Oil Change",
+        "slug": "oil-change",
+        "icon": "🛢️",
+        "image": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=600&auto=format&fit=crop",
+        "description": "Quick oil change service",
+        "profiles": []
+      },
+      {
+        "name": "Tire Service",
+        "slug": "tire-service",
+        "icon": "🛞",
+        "image": "https://images.unsplash.com/photo-1594787318286-3d835c1d207f?q=80&w=600&auto=format&fit=crop",
+        "description": "Tire repair and replacement",
+        "profiles": []
+      },
+      {
+        "name": "Battery Service",
+        "slug": "battery-service",
+        "icon": "🔋",
+        "image": "https://images.unsplash.com/photo-1609592043945-6c5c97155d7c?q=80&w=600&auto=format&fit=crop",
+        "description": "Battery testing and replacement",
+        "profiles": []
+      }
+    ]
+  },
+  {
+    "name": "Electrician",
+    "slug": "electrician",
+    "icon": "⚡",
+    "description": "Wiring & appliance repair",
+    "gradient": "from-yellow-500 to-orange-500",
+    "bgColor": "bg-yellow-50",
+    "subcategories": [
+      {
+        "name": "Wiring",
+        "slug": "wiring",
+        "icon": "⚡",
+        "image": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop",
+        "description": "Electrical wiring services",
+        "profiles": [
+          {
+            "id": "spark-electricals",
+            "name": "Spark Electricals",
+            "rating": 4.9,
+            "jobs": 180,
+            "hourlyRate": 60,
+            "offerRate": 52,
+            "images": [
+              "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Certified master electrician",
+              "Residential and commercial wiring",
+              "Code-compliant installations"
+            ],
+            "reviews": []
+          },
+          {
+            "id": "powerfix-pro",
+            "name": "PowerFix Pro",
+            "rating": 4.7,
+            "jobs": 145,
+            "hourlyRate": 55,
+            "offerRate": 48,
+            "images": [
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Emergency electrical services",
+              "Smart home wiring specialist",
+              "Safety inspection included"
+            ],
+            "reviews": []
+          }
+        ]
+      },
+      {
+        "name": "Appliance Repair",
+        "slug": "appliance-repair",
+        "icon": "🔌",
+        "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop",
+        "description": "Fix electrical appliances",
+        "profiles": []
+      },
+      {
+        "name": "Lighting Installation",
+        "slug": "lighting-installation",
+        "icon": "💡",
+        "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=600&auto=format&fit=crop",
+        "description": "Install lights and fixtures",
+        "profiles": []
+      },
+      {
+        "name": "Panel Upgrade",
+        "slug": "panel-upgrade",
+        "icon": "⚙️",
+        "image": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop",
+        "description": "Upgrade electrical panels",
+        "profiles": []
+      }
+    ]
+  },
+  {
+    "name": "Plumbing",
+    "slug": "plumbing",
+    "icon": "🔧",
+    "description": "Leak repair & installation",
+    "gradient": "from-indigo-500 to-purple-500",
+    "bgColor": "bg-indigo-50",
+    "subcategories": [
+      {
+        "name": "Leak Repair",
+        "slug": "leak-repair",
+        "icon": "💧",
+        "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop",
+        "description": "Fix leaky pipes and faucets",
+        "profiles": [
+          {
+            "id": "bb-plumbing",
+            "name": "BB Plumbing Solutions",
+            "rating": 4.9,
+            "jobs": 200,
+            "hourlyRate": 50,
+            "offerRate": 42,
+            "images": [
+              "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "20+ years leak detection expertise",
+              "24/7 emergency service available",
+              "No-leak guarantee for 1 year"
+            ],
+            "reviews": []
+          },
+          {
+            "id": "leak-masters",
+            "name": "Leak Masters",
+            "rating": 4.7,
+            "jobs": 160,
+            "hourlyRate": 48,
+            "offerRate": 40,
+            "images": [
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Advanced leak detection equipment",
+              "Minimal damage to walls/floors",
+              "Free inspection included"
+            ],
+            "reviews": []
+          }
+        ]
+      },
+      {
+        "name": "Pipe Installation",
+        "slug": "pipe-installation",
+        "icon": "🔧",
+        "image": "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600&auto=format&fit=crop",
+        "description": "Install new pipes and fixtures",
+        "profiles": [
+          {
+            "id": "pipepro-solutions",
+            "name": "PipePro Solutions",
+            "rating": 4.8,
+            "jobs": 140,
+            "hourlyRate": 55,
+            "offerRate": 48,
+            "images": [
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Expert in PVC, copper, and PEX pipes",
+              "Licensed and insured",
+              "Free estimates provided"
+            ],
+            "reviews": []
+          }
+        ]
+      },
+      {
+        "name": "Drain Cleaning",
+        "slug": "drain-cleaning",
+        "icon": "🚰",
+        "image": "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=600&auto=format&fit=crop",
+        "description": "Clear clogged drains",
+        "profiles": []
+      },
+      {
+        "name": "Water Heater",
+        "slug": "water-heater",
+        "icon": "♨️",
+        "image": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=600&auto=format&fit=crop",
+        "description": "Repair and install water heaters",
+        "profiles": []
+      }
+    ]
+  },
+  {
+    "name": "Cleaning",
+    "slug": "cleaning",
+    "icon": "🧹",
+    "description": "Deep & carpet cleaning",
+    "gradient": "from-green-500 to-teal-500",
+    "bgColor": "bg-green-50",
+    "subcategories": [
+      {
+        "name": "Deep Cleaning",
+        "slug": "deep-cleaning",
+        "icon": "✨",
+        "image": "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=600&auto=format&fit=crop",
+        "description": "Thorough home cleaning",
+        "profiles": [
+          {
+            "id": "sparkle-clean",
+            "name": "SparkleClean Services",
+            "rating": 4.9,
+            "jobs": 220,
+            "hourlyRate": 40,
+            "offerRate": 35,
+            "images": [
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Professional deep cleaning service",
+              "Eco-friendly cleaning products",
+              "Satisfaction guarantee"
+            ],
+            "reviews": []
+          }
+        ]
+      },
+      {
+        "name": "Carpet Cleaning",
+        "slug": "carpet-cleaning",
+        "icon": "🧽",
+        "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=600&auto=format&fit=crop",
+        "description": "Professional carpet care",
+        "profiles": []
+      }
+    ]
+  },
+  {
+    "name": "Gardening",
+    "slug": "gardening",
+    "icon": "🌿",
+    "description": "Lawn & landscaping care",
+    "gradient": "from-emerald-500 to-lime-500",
+    "bgColor": "bg-emerald-50",
+    "subcategories": [
+      {
+        "name": "Lawn Mowing",
+        "slug": "lawn-mowing",
+        "icon": "🌱",
+        "image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=600&auto=format&fit=crop",
+        "description": "Professional lawn care",
+        "profiles": [
+          {
+            "id": "green-thumb-lawn",
+            "name": "Green Thumb Lawn Care",
+            "rating": 4.8,
+            "jobs": 175,
+            "hourlyRate": 45,
+            "offerRate": 38,
+            "images": [
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Weekly/bi-weekly lawn maintenance",
+              "Professional-grade equipment",
+              "Edge trimming included"
+            ],
+            "reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "HVAC",
+    "slug": "hvac",
+    "icon": "❄️",
+    "description": "AC repair & maintenance",
+    "gradient": "from-sky-500 to-blue-600",
+    "bgColor": "bg-sky-50",
+    "subcategories": [
+      {
+        "name": "AC Repair",
+        "slug": "ac-repair",
+        "icon": "❄️",
+        "image": "https://images.unsplash.com/photo-1631545806609-47c7b1f8f73e?q=80&w=600&auto=format&fit=crop",
+        "description": "Air conditioner repair and maintenance",
+        "profiles": [
+          {
+            "id": "cool-comfort-hvac",
+            "name": "Cool Comfort HVAC",
+            "rating": 4.9,
+            "jobs": 210,
+            "hourlyRate": 65,
+            "offerRate": 55,
+            "images": [
+              "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1631545806609-47c7b1f8f73e?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "24/7 emergency AC repairs",
+              "All brands serviced",
+              "Free diagnostics"
+            ],
+            "reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Appliance",
+    "slug": "appliance",
+    "icon": "🔌",
+    "description": "Home appliance repairs",
+    "gradient": "from-violet-500 to-purple-600",
+    "bgColor": "bg-violet-50",
+    "subcategories": [
+      {
+        "name": "Refrigerator Repair",
+        "slug": "refrigerator-repair",
+        "icon": "🧊",
+        "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?q=80&w=600&auto=format&fit=crop",
+        "description": "Fix refrigerator issues",
+        "profiles": [
+          {
+            "id": "appliance-experts",
+            "name": "Appliance Repair Experts",
+            "rating": 4.8,
+            "jobs": 185,
+            "hourlyRate": 60,
+            "offerRate": 52,
+            "images": [
+              "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "All refrigerator brands serviced",
+              "Genuine replacement parts",
+              "90-day repair warranty"
+            ],
+            "reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Carpentry",
+    "slug": "carpentry",
+    "icon": "🪚",
+    "description": "Furniture & door installation",
+    "gradient": "from-amber-600 to-orange-600",
+    "bgColor": "bg-amber-50",
+    "subcategories": [
+      {
+        "name": "Furniture Assembly",
+        "slug": "furniture-assembly",
+        "icon": "🪑",
+        "image": "https://images.unsplash.com/photo-1581539250439-c96689b516dd?q=80&w=600&auto=format&fit=crop",
+        "description": "Assemble and install furniture",
+        "profiles": [
+          {
+            "id": "handy-assembly",
+            "name": "Handy Assembly Services",
+            "rating": 4.8,
+            "jobs": 165,
+            "hourlyRate": 50,
+            "offerRate": 42,
+            "images": [
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1581539250439-c96689b516dd?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Expert furniture assembly",
+              "IKEA specialist",
+              "Tools and hardware provided"
+            ],
+            "reviews": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Painting",
+    "slug": "painting",
+    "icon": "🎨",
+    "description": "Interior & exterior painting",
+    "gradient": "from-pink-500 to-rose-500",
+    "bgColor": "bg-pink-50",
+    "subcategories": [
+      {
+        "name": "Interior Painting",
+        "slug": "interior-painting",
+        "icon": "🎨",
+        "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop",
+        "description": "Paint indoor walls and ceilings",
+        "profiles": [
+          {
+            "id": "color-masters",
+            "name": "Color Masters Painting",
+            "rating": 4.9,
+            "jobs": 195,
+            "hourlyRate": 55,
+            "offerRate": 48,
+            "images": [
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop"
+            ],
+            "description": [
+              "Professional interior painting",
+              "Premium quality paints",
+              "Clean and precise work"
+            ],
+            "reviews": []
+          }
+        ]
+      }
+    ]
+  }
+]

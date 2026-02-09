@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import"../../app/globals.css";
+import "../../app/globals.css";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-gradient-to-b from-[#000001] to-[#340063] shadow-sm rounded-b-4xl mt-4 md:mt-3 lg:mt-6">
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-gradient-to-b from-[#000001] to-[#191146] shadow-sm rounded-b-4xl mt-4 md:mt-3 lg:mt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
 
@@ -31,7 +31,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-8">
               {[
                 { name: "Home", href: "/" },
-                { name: "Services", href: "/booking" },
+                { name: "Services", href: "/services" },
                 { name: "About", href: "/about" },
                 { name: "Contact", href: "/contact" },
               ].map((item) => (
@@ -82,9 +82,8 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
-          mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         {/* Backdrop */}
         <div
@@ -94,9 +93,8 @@ export default function Navbar() {
 
         {/* Slide Panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-3/4 max-w-sm bg-gradient-to-b from-[#000001] to-[#340063] p-6 shadow-xl transform transition-transform duration-300 ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 h-full w-3/4 max-w-sm bg-gradient-to-b from-[#000001] to-[#340063] p-6 shadow-xl transform transition-transform duration-300 ${mobileOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           {/* Close */}
           <button
@@ -111,7 +109,7 @@ export default function Navbar() {
           <nav className="flex flex-col gap-5 text-lg">
             {[
               { name: "Home", href: "/" },
-              { name: "Services", href: "/booking" },
+              { name: "Services", href: "/services" },
               { name: "About", href: "/about" },
               { name: "Contact", href: "/contact" },
               { name: "Login", href: "/login" },

@@ -16,25 +16,25 @@ export default function RegisterPage() {
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (formData.password !== formData.confirmPassword) {
-    alert("Passwords don't match!");
-    return;
-  }
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords don't match!");
+      return;
+    }
 
-  // continue submit logic
-};
+    // continue submit logic
+  };
 
 
- const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
 
-  setFormData((prev) => ({
-    ...prev,
-    [name]: type === "checkbox" ? checked : value,
-  }));
-};
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
 
 
   return (
@@ -73,7 +73,7 @@ export default function RegisterPage() {
               Or{" "}
               <a
                 href="/login"
-                className="font-medium text-[#8139c6] hover:text-[#6d2db3] transition"
+                className="font-medium text-[#000001] hover:text-[#191146] transition"
               >
                 sign in to your existing account
               </a>
@@ -135,7 +135,7 @@ export default function RegisterPage() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-black mb-2">
                     First name
                   </label>
                   <input
@@ -152,7 +152,7 @@ export default function RegisterPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-black mb-2">
                     Last name
                   </label>
                   <input
@@ -170,7 +170,7 @@ export default function RegisterPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                   Email address
                 </label>
                 <input
@@ -187,7 +187,7 @@ export default function RegisterPage() {
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="password" className="block text-sm font-medium text-black mb-2">
                   Password
                 </label>
                 <input
@@ -204,7 +204,7 @@ export default function RegisterPage() {
               </div>
 
               <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="confirmPassword" className="block text-sm font-medium text-black mb-2">
                   Confirm password
                 </label>
                 <input
@@ -231,7 +231,7 @@ export default function RegisterPage() {
                 required
                 className="h-4 w-4 text-[#8139c6] focus:ring-[#8139c6] border-gray-300 rounded cursor-pointer mt-1"
               />
-              <label htmlFor="agree-terms" className="ml-2 block text-sm text-gray-900 cursor-pointer">
+              <label htmlFor="agree-terms" className="ml-2 block mt-1 text-sm text-black cursor-pointer">
                 I agree to the{" "}
                 <a href="/terms" className="text-[#8139c6] hover:text-[#6d2db3] transition">
                   Terms of Service
@@ -245,32 +245,32 @@ export default function RegisterPage() {
 
             <div>
               <form onSubmit={handleSubmit}>
-  <button
-    type="submit"
-    className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-r from-[#8139c6] to-[#39C681] hover:from-[#6d2db3] hover:to-[#2ea86f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-  >
-    <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-      <svg
-        className="h-5 w-5 text-white/80 group-hover:text-white/100 transition"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          fillRule="evenodd"
-          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </span>
-    Create account
-  </button>
-</form>
+                <button
+                  type="submit"
+                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-b from-[#000001] to-[#191146] hover:from-[#191146] hover:to-[#000001] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+                    <svg
+                      className="h-5 w-5 text-white/80 group-hover:text-white/100 transition"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  Create account
+                </button>
+              </form>
 
             </div>
           </div>
 
           {/* Terms */}
-          <p className="text-center text-xs text-gray-500">
+          <p className="text-center mr-5 text-xs text-black">
             By creating an account, you agree to our{" "}
             <a href="/terms" className="text-[#8139c6] hover:text-[#6d2db3] transition">
               Terms of Service
@@ -285,7 +285,7 @@ export default function RegisterPage() {
 
       {/* Right Side - Image/Brand Section */}
       <div className="hidden lg:block relative w-0 flex-1">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#39C681] to-[#8139c6] opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#000001] to-[#191146] opacity-90"></div>
         <img
           className="absolute inset-0 h-full w-full object-cover mix-blend-overlay"
           src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop"
