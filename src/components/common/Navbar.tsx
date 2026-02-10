@@ -7,6 +7,13 @@ import "../../app/globals.css";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   // 🔒 Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
@@ -29,12 +36,7 @@ export default function Navbar() {
 
             {/* Desktop Links */}
             <div className="hidden md:flex items-center gap-8">
-              {[
-                { name: "Home", href: "/" },
-                { name: "Services", href: "/services" },
-                { name: "About", href: "/about" },
-                { name: "Contact", href: "/contact" },
-              ].map((item) => (
+              {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -47,18 +49,22 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTA */}
+
             <div className="hidden md:flex items-center gap-4">
               <Link href="/login" className="text-white hover:text-indigo-600 font-medium">
                 Login
               </Link>
-
-              <button
-                onClick={() => window.open("https://wa.me/9815614201", "_blank")}
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
-              >
-                WhatsApp
-              </button>
+              <div className="rainbow relative z-0 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100">
+                <button
+                  onClick={() => window.open("https://wa.me/9815614201", "_blank")}
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+                >
+                  WhatsApp
+                </button>
+              </div>
             </div>
+
+
 
             {/* Mobile Hamburger */}
             <button
@@ -93,7 +99,7 @@ export default function Navbar() {
 
         {/* Slide Panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-3/4 max-w-sm bg-gradient-to-b from-[#000001] to-[#340063] p-6 shadow-xl transform transition-transform duration-300 ${mobileOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-0 right-0 h-full w-3/4 max-w-sm bg-gradient-to-b from-[#000001] to-[#191146] p-6 shadow-xl transform transition-transform duration-300 ${mobileOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           {/* Close */}
@@ -102,18 +108,10 @@ export default function Navbar() {
             className="text-white text-2xl mb-6"
             aria-label="Close menu"
           >
-            ✕
           </button>
-
           {/* Links */}
           <nav className="flex flex-col gap-5 text-lg">
-            {[
-              { name: "Home", href: "/" },
-              { name: "Services", href: "/services" },
-              { name: "About", href: "/about" },
-              { name: "Contact", href: "/contact" },
-              { name: "Login", href: "/login" },
-            ].map((item) => (
+            {[...navItems, { name: "Login", href: "/login" }].map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -123,16 +121,18 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-
+            <div className="rainbow relative z-0 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100"></div>
             <button
               onClick={() => window.open("https://wa.me/9815614201", "_blank")}
-              className="mt-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-full font-semibold"
+              className="mt-6 rainbow relative z-0 overflow-hidden flex items-center justify-center p-[2px] rounded-full hover:scale-105 transition duration-300 active:scale-100 w-full"
             >
-              WhatsApp
+              <div className="w-full bg-[#191146] rounded-full py-3 text-white font-semibold flex items-center justify-center">
+                WhatsApp
+              </div>
             </button>
           </nav>
-        </div>
-      </div>
+        </div >
+      </div >
     </>
   );
 }
