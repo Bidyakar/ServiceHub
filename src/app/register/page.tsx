@@ -2,10 +2,16 @@
 
 import { useState } from "react";
 import React from "react";
-
-
+import { useFormState } from "react-dom";
+import { userRegister } from "@/app/actions/userAuth";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 export default function RegisterPage() {
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get('redirect') || '/';
+
+  const [state, formAction] = useFormState(userRegister, null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -14,18 +20,6 @@ export default function RegisterPage() {
     confirmPassword: "",
     agreeToTerms: false,
   });
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords don't match!");
-      return;
-    }
-
-    // continue submit logic
-  };
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -44,7 +38,7 @@ export default function RegisterPage() {
         <div className="max-w-md w-full space-y-8">
           {/* Logo and Header */}
           <div>
-            <a href="/" className="flex items-center justify-center gap-2 mb-8">
+            <Link href="/" className="flex items-center justify-center gap-2 mb-8">
               <div className="w-12 h-12 bg-gradient-to-br from-[#8139c6] to-[#39C681] rounded-xl flex items-center justify-center">
                 <svg
                   width="28"
@@ -65,18 +59,18 @@ export default function RegisterPage() {
               <span className="text-2xl font-bold bg-gradient-to-r from-[#8139c6] to-[#39C681] bg-clip-text text-transparent">
                 ServiceHub
               </span>
-            </a>
+            </Link>
             <h2 className="text-center text-3xl font-bold text-gray-900">
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{" "}
-              <a
+              <Link
                 href="/login"
                 className="font-medium text-[#000001] hover:text-[#191146] transition"
               >
                 sign in to your existing account
-              </a>
+              </Link>
             </p>
           </div>
 
@@ -131,7 +125,17 @@ export default function RegisterPage() {
           </div>
 
           {/* Registration Form */}
-          <div className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" action={formAction}>
+            {/* Hidden redirect field */}
+            <input type="hidden" name="redirect" value={redirect} />
+
+            {/* Error Message */}
+            {state?.error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                {state.error}
+              </div>
+            )}
+
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -244,41 +248,38 @@ export default function RegisterPage() {
             </div>
 
             <div>
-              <form onSubmit={handleSubmit}>
-                <button
-                  type="submit"
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-b from-[#000001] to-[#191146] hover:from-[#191146] hover:to-[#000001] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                >
-                  <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                    <svg
-                      className="h-5 w-5 text-white/80 group-hover:text-white/100 transition"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                  Create account
-                </button>
-              </form>
-
+              <button
+                type="submit"
+                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-lg text-white bg-gradient-to-b from-[#000001] to-[#191146] hover:from-[#191146] hover:to-[#000001] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8139c6] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+                  <svg
+                    className="h-5 w-5 text-white/80 group-hover:text-white/100 transition"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+                Create account
+              </button>
             </div>
-          </div>
+          </form>
 
           {/* Terms */}
           <p className="text-center mr-5 text-xs text-black">
             By creating an account, you agree to our{" "}
-            <a href="/terms" className="text-[#8139c6] hover:text-[#6d2db3] transition">
+            <Link href="/terms" className="text-[#8139c6] hover:text-[#6d2db3] transition">
               Terms of Service
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a href="/privacy" className="text-[#8139c6] hover:text-[#6d2db3] transition">
+            <Link href="/privacy" className="text-[#8139c6] hover:text-[#6d2db3] transition">
               Privacy Policy
-            </a>
+            </Link>
           </p>
         </div>
       </div>

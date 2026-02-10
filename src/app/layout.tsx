@@ -1,17 +1,19 @@
-// app/layout.tsx
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import "./globals.css";
+import { getUserSession } from "@/lib/auth";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const isLoggedIn = await getUserSession();
+
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn} />
 
         {/* Page content */}
         <main className="flex-1">

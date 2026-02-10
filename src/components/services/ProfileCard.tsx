@@ -29,8 +29,8 @@ export default function ProfileCard({
                                 key={index}
                                 onClick={() => setThumbnail(image)}
                                 className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${thumbnail === image
-                                        ? "border-indigo-500 ring-2 ring-indigo-200"
-                                        : "border-gray-200/20 hover:border-indigo-300"
+                                    ? "border-indigo-500 ring-2 ring-indigo-200"
+                                    : "border-gray-200/20 hover:border-indigo-300"
                                     }`}
                             >
                                 <img
@@ -129,11 +129,12 @@ export default function ProfileCard({
                         >
                             View Profile
                         </Link>
-                        <button
+                        <Link
+                            href="/esewa-payment"
                             className="flex-1 py-3 px-4 text-center font-semibold rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                         >
                             Book Now →
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -2,19 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useFormState } from "react-dom";
+import { userLogin } from "@/app/actions/userAuth";
+import { useSearchParams } from "next/navigation";
 
 export default function LoginPage() {
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get('redirect') || '/';
+
+  const [state, formAction] = useFormState(userLogin, null);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     rememberMe: false,
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Login submitted:", formData);
-    // Add your authentication logic here
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -118,7 +119,17 @@ export default function LoginPage() {
           </div>
 
           {/* Login Form */}
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <form className="mt-8 space-y-6" action={formAction}>
+            {/* Hidden redirect field */}
+            <input type="hidden" name="redirect" value={redirect} />
+
+            {/* Error Message */}
+            {state?.error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                {state.error}
+              </div>
+            )}
+
             <div className="space-y-4">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-black mb-2">

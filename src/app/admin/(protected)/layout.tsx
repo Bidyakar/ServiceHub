@@ -29,9 +29,20 @@ export default function AdminLayout({
                     >
                         Add Professional
                     </Link>
+
+                    <form action={async () => {
+                        'use server';
+                        const { logout } = await import('@/app/actions/auth');
+                        await logout();
+                    }}>
+                        <button type="submit" className="w-full text-left px-6 py-3 text-red-400 hover:bg-red-900/20 hover:text-red-300 transition-colors mt-4">
+                            Logout
+                        </button>
+                    </form>
+
                     <Link
                         href="/"
-                        className="block px-6 py-3 text-white hover:bg-gray-800 hover:text-white transition-colors mt-8"
+                        className="block px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition-colors mt-8 text-sm"
                     >
                         ← Back to Site
                     </Link>
